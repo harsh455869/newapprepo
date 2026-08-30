@@ -1,0 +1,110 @@
+export const spacing = {
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  xxl: 48,
+} as const;
+
+export const radius = {
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  full: 9999,
+} as const;
+
+export const typography = {
+  fontFamily: 'System',
+  sizes: {
+    xs: 12,
+    sm: 14,
+    md: 16,
+    lg: 20,
+    xl: 24,
+    xxl: 32,
+    display: 40,
+  },
+  weights: {
+    regular: '400' as const,
+    medium: '500' as const,
+    semibold: '600' as const,
+    bold: '700' as const,
+  },
+  lineHeight: {
+    body: 24,
+    heading: 28,
+    tight: 20,
+  },
+} as const;
+
+export type Theme = typeof lightTheme | typeof darkTheme;
+
+export const lightTheme = {
+  mode: 'light' as const,
+  colors: {
+    background: '#FAFAF8',
+    surface: '#FFFFFF',
+    surfaceSecondary: '#F5F5F3',
+    surfaceTertiary: '#EFEEEC',
+    border: '#E5E5E3',
+    borderLight: '#F0F0EE',
+    text: '#1A1A1A',
+    textSecondary: '#6B6B6B',
+    textTertiary: '#9A9A9A',
+    textOnPrimary: '#FFFFFF',
+    primary: '#2BAE66',
+    primaryLight: '#E8F5EE',
+    primaryDark: '#1E8A4F',
+    accent: '#3B82F6',
+    success: '#22C55E',
+    warning: '#F59E0B',
+    error: '#EF4444',
+    danger: '#DC2626',
+    overlay: 'rgba(0,0,0,0.4)',
+    shadow: 'rgba(0,0,0,0.08)',
+    shadowStrong: 'rgba(0,0,0,0.16)',
+    tabInactive: '#9A9A9A',
+    tabActive: '#2BAE66',
+    star: '#F59E0B',
+    premium: '#D4A24C',
+  },
+  spacing,
+  radius,
+  typography,
+};
+
+export const darkTheme = {
+  mode: 'dark' as const,
+  colors: {
+    background: '#0F0F0E',
+    surface: '#1C1C1A',
+    surfaceSecondary: '#262624',
+    surfaceTertiary: '#2E2E2C',
+    border: '#333332',
+    borderLight: '#2A2A28',
+    text: '#F5F5F3',
+    textSecondary: '#A0A09E',
+    textTertiary: '#6B6B6B',
+    textOnPrimary: '#FFFFFF',
+    primary: '#3DC777',
+    primaryLight: '#1A2E22',
+    primaryDark: '#4ADE80',
+    accent: '#60A5FA',
+    success: '#4ADE80',
+    warning: '#FBBF24',
+    error: '#F87171',
+    danger: '#EF4444',
+    overlay: 'rgba(0,0,0,0.6)',
+    shadow: 'rgba(0,0,0,0.3)',
+    shadowStrong: 'rgba(0,0,0,0.5)',
+    tabInactive: '#6B6B6B',
+    tabActive: '#3DC777',
+    star: '#FBBF24',
+    premium: '#E0B96B',
+  },
+  spacing,
+  radius,
+  typography,
+};
